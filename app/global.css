@@ -1,0 +1,62 @@
+:root {
+  --background1: purple;
+  --background2: rgb(205, 129, 222);
+  --background3: #171717;
+  --foreground1: black;
+  --foreground2: white;
+  --foreground3: orange;
+}
+
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--foreground1);
+  background-image: linear-gradient(var(--background1), var(--background2));
+  font-family: -apple-system,
+    BlinkMacSystemFont,
+    Segoe UI,
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    Fira Sans,
+    Droid Sans,
+    Helvetica Neue,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 600px;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+h1, h2, h3 { font-weight: bold; }
+h1 { font-size: 4rem; }
+h2 { font-size: 3rem; }
+h3 { font-size: 1.5rem; }
+
+.gradient-text {
+  background-image: linear-gradient(var(--foreground3), var(--foreground2));
+  background-clip: text;
+  color: transparent;
+}
