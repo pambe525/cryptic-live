@@ -1,6 +1,12 @@
 import Image from "next/image";
 import styles from "./index.module.css";
 
+export const metadata = {
+  title: "CrypticLive Home",
+  description: "Word Puzzles for Cruciverbalists",
+  icon: "/favicon.ico"
+}
+
 export default function Home() {
   return (
     <>

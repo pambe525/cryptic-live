@@ -1,12 +1,8 @@
 import "./global.css";
+import Head from "next/head";
 import Header from "../components/header.js";
 import Footer from "../components/footer.js";
-
-export const metadata = {
-  title: "CrypticLive",
-  description: "Word Puzzles for Cruciverbalists",
-  icon: "/favicon.ico"
-}
+import NavBar from "../components/navbar.js";
 
 export default function RootLayout({ children }) {
   return (
@@ -14,6 +10,7 @@ export default function RootLayout({ children }) {
       <body>
         <div className="container">
           <Header />
+          <NavBar />
           {children}
           <Footer />
         </div>
