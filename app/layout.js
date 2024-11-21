@@ -1,9 +1,7 @@
 import "./global.css";
 import Header from "../components/header.js";
 import Footer from "../components/footer.js";
-import NavBar from "../components/navbar.js";
 
-// Used in the mets tag
 export const metadata = {
   title: "CrypticLive",
   description: "Word Puzzles for Cruciverbalists",
@@ -16,7 +14,6 @@ export default function RootLayout({ children }) {
       <body>
         <div className="container">
           <Header />
-          <NavBar />
           {children}
           <Footer />
         </div>

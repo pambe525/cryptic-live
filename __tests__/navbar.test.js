@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import NavBar from "../components/navbar.js";
 
-describe("NavBar", ()=> {
+describe("NavBar", () => {
   it('is rendered', () => {
     render(<NavBar />);
     const navBar = screen.getByRole('navigation');

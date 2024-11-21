@@ -7,13 +7,14 @@
   --foreground3: orange;
 }
 
-html, body {
+html,
+body {
   max-width: 100vw;
   overflow-x: hidden;
 }
 
 body {
-  color: var(--foreground1);
+  color: var(--foreground2);
   background-image: linear-gradient(var(--background1), var(--background2));
   font-family: -apple-system,
     BlinkMacSystemFont,
@@ -50,10 +51,23 @@ a {
   margin: auto;
 }
 
-h1, h2, h3 { font-weight: bold; }
-h1 { font-size: 4rem; }
-h2 { font-size: 3rem; }
-h3 { font-size: 1.5rem; }
+h1,
+h2,
+h3 {
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
 
 .gradient-text {
   background-image: linear-gradient(var(--foreground3), var(--foreground2));
