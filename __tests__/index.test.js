@@ -1,16 +1,17 @@
-/**
- * @jest-environment jsdom
- */
-import React from 'react';
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import Home from "../app/page.js";
 
-describe("Home", () => {
-  it("renders a heading", () => {
+// import { getPage } from "next-page-tester";
+
+describe("Home Page", () => {
+  beforeEach(() => {
     render(<Home />);
-    const heading = screen.getByRole("heading", {
-      name: /welcome to next\.js!/i,
-    });
-    expect(heading).toBeInTheDocument();
+  });
+
+  it("to have headings", () => {
+    const headings = screen.getAllByRole("heading");
+    expect(headings).toHaveLength(2);
+    expect(headings[0]).toHaveTextContent(/word puzzles for cruciverbalists/i);
+    expect(headings[1]).toHaveTextContent(/join the community/i);
   });
 });

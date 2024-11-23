@@ -10,37 +10,31 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
+      <section>
+        <h2 className="gradient-text">Word Puzzles for Cruciverbalists</h2>
+        <p>
+          Unlock the world of cryptic puzzles and challenge your mind with fellow cruciverbalists.
         </p>
+        <ul className={styles.listitem}>
+          <li>Complete a course on <b>Mastering the Art of Cryptic Crosswords</b></li>
+          <li><b>Daily Cryptic Clue</b> teasers to keep your mind sharp</li>
+          <li><b>Weekly Mini Cryptic Crossword</b></li>
+          <li>Track your progress with our <b>Score Tracking System</b></li>
+          <li>Create and share your own cryptic clues </li>
+          <li>Connect with other passionate crosword puzzle enthusiasts</li>
+        </ul>
+      </section>
 
-        <div className={styles.grid}>
-          <a href="https://vercel.com/new" className={styles.card}>
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+      <section>
+        <h2 className="gradient-text">Join the Community</h2>
+        <p>
+          One shared interest: <b>Cryptic Crosswords</b><br />
+          Get your free account now!
+        </p>
+        <div>
+          <a role="button">Sign Up</a> or <a role="button">Login</a>
         </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      </section>
     </>
   );
 }

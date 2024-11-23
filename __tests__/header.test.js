@@ -1,10 +1,12 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import Header from "../components/header.js";
 
 describe("Header", () => {
-  it('has logo', () => {
+  it("has logo that links to home page", () => {
     render(<Header />);
-    const logo = screen.getByRole('img', 'logo.png');
+    const link = screen.getByRole("link");
+    const logo = within(link).getByRole('img', 'logo.png');
     expect(logo).toBeInTheDocument();
+    expect(link).toHaveAttribute('href', '/');
   });
 });

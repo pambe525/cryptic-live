@@ -10,7 +10,6 @@ export default function RootLayout({ children }) {
       <body>
         <div className="container">
           <Header />
-          <NavBar />
           {children}
           <Footer />
         </div>

@@ -42,6 +42,14 @@ a {
   text-decoration: none;
 }
 
+p {
+  margin: 0.5rem 0 1rem 0;
+}
+
+hr {
+  border-top: 1px solid var(--foreground3);
+}
+
 .container {
   min-height: 100vh;
   max-width: 600px;
@@ -54,23 +62,61 @@ a {
 h1,
 h2,
 h3 {
-  font-weight: normal;
+  font-weight: bold;
+  margin: 0 0 0.5rem 0;
+  padding: 0;
 }
 
 h1 {
-  font-size: 3rem;
-}
-
-h2 {
   font-size: 2rem;
 }
 
+h2 {
+  font-size: 1.5rem;
+}
+
 h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .gradient-text {
   background-image: linear-gradient(var(--foreground3), var(--foreground2));
   background-clip: text;
   color: transparent;
+}
+
+section {
+  padding: 1rem;
+  text-align: left;
+}
+
+button,
+a[role=button] {
+  margin: 0.5rem 0.2rem;
+  padding: 0.2rem 1.2rem;
+  background-image: linear-gradient(to right, var(--foreground3) 10%, var(--foreground2));
+  font-weight: bold;
+  color: var(--foreground1);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover,
+a[role=button] {
+  border: 1px solid white;
+}
+
+header {
+  padding: 0.8rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+footer {
+  font-size: 0.8rem;
+  color: var(--foreground1);
+  margin-top: auto;
+  padding: 1rem 0;
+  text-align: center;
 }

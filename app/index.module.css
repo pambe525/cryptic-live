@@ -1,31 +1,8 @@
-
-.title a {
-  color: orange;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 2rem;
-  color: white;
-}
-
-.title,
-.description {
-  text-align: center;
-  color: white
-}
-
-.description {
+.listitem {
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 1rem;
+  list-style-type: square;
+  padding-inline-start: 2rem;
 }
 
 .grid {
@@ -49,7 +26,7 @@
   transition:
     color 0.15s ease,
     border-color 0.15s ease;
-  background-color: white;
+  background-color: transparent;
 }
 
 .card:hover,
@@ -68,11 +45,6 @@
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
 }
 
 @media (max-width: 600px) {
