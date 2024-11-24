@@ -1,8 +1,17 @@
 .listitem {
   line-height: 1.5;
-  font-size: 1rem;
+  font-size: 0.9rem;
   list-style-type: square;
-  padding-inline-start: 2rem;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+}
+
+.side_by_side {
+  display: flex;
+}
+
+.img_shadow {
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
 }
 
 .grid {
@@ -10,7 +19,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 600px;
   margin-top: 3rem;
 }
 

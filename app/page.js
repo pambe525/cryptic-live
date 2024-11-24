@@ -15,14 +15,17 @@ export default function Home() {
         <p>
           Unlock the world of cryptic puzzles and challenge your mind with fellow cruciverbalists.
         </p>
-        <ul className={styles.listitem}>
-          <li>Complete a course on <b>Mastering the Art of Cryptic Crosswords</b></li>
-          <li><b>Daily Cryptic Clue</b> teasers to keep your mind sharp</li>
-          <li><b>Weekly Mini Cryptic Crossword</b></li>
-          <li>Track your progress with our <b>Score Tracking System</b></li>
-          <li>Create and share your own cryptic clues </li>
-          <li>Connect with other passionate crosword puzzle enthusiasts</li>
-        </ul>
+        <div className={styles.side_by_side}>
+          <ul className={styles.listitem}>
+            <li>Learn <b>Mastering the Art of Cryptic Crosswords</b></li>
+            <li><b>Daily Cryptic Clue</b> teasers</li>
+            <li><b>Weekly Mini Cryptic Crossword</b></li>
+            <li>Track progress with our <b>Score Tracking System</b></li>
+            <li><b>Create and share</b> your own cryptic clues </li>
+            <li><b>Connect</b> with other passionate crosword puzzlers</li>
+          </ul>
+          <Image className={styles.img_shadow} src="/crossword.png" alt="Crossword" width={140} height={140} priority />
+        </div>
       </section>
 
       <section>
