@@ -99,6 +99,7 @@ a[role=button] {
   color: var(--foreground1);
   border-radius: 6px;
   cursor: pointer;
+  font-size: 0.9rem;
 }
 
 button:hover,

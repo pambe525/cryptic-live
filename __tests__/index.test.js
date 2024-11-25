@@ -1,7 +1,5 @@
-import { render, screen, within } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import Home from "../app/page.js";
-
-// import { getPage } from "next-page-tester";
 
 describe("Home Page", () => {
   beforeEach(() => {
