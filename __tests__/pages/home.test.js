@@ -1,5 +1,8 @@
+/**
+ * @jest-environment jsdom
+ */
 import { render, screen } from "@testing-library/react";
-import Home from "../app/page.js";
+import Home from "@/app/page.js";
 
 describe("Home Page", () => {
   beforeEach(() => {
