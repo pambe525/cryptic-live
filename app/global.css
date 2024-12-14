@@ -1,10 +1,11 @@
 :root {
-  --background1: purple;
-  --background2: rgb(205, 129, 222);
-  --background3: #171717;
-  --foreground1: black;
-  --foreground2: white;
-  --foreground3: orange;
+  --darkGrad: purple;
+  --lightGrad: rgb(205, 129, 222);
+  --bgColor1: rgb(58, 3, 58);
+  --bgColor2: rgb(217, 98, 46);
+  --bgColor3: darkslategrey;
+  --darkText: black;
+  --lightText: white;
 }
 
 html,
@@ -15,7 +16,7 @@ body {
 
 body {
   color: var(--foreground2);
-  background-image: linear-gradient(var(--background1), var(--background2));
+  background-image: linear-gradient(var(--darkGrad), var(--lightGrad));
   font-family: -apple-system,
     BlinkMacSystemFont,
     Segoe UI,
@@ -47,7 +48,9 @@ p {
 }
 
 hr {
-  border-top: 1px solid var(--foreground3);
+  margin: 0.5rem 0;
+  border: 2px solid var(--bgColor2);
+  filter: drop-shadow(0 1px 1px rgb(31, 2, 2));
 }
 
 .container {
@@ -79,46 +82,137 @@ h3 {
   font-size: 1rem;
 }
 
-.gradient-text {
-  background-image: linear-gradient(var(--foreground3), var(--foreground2));
+.fancyText {
+  background-image: linear-gradient(var(--lightText), var(--bgColor2));
   background-clip: text;
   color: transparent;
 }
 
-section {
-  padding: 1rem;
-  text-align: left;
+.dropShadow {
+  filter: drop-shadow(2px 2px black);
+}
+
+.toRight {
+  text-align: right;
 }
 
 button,
 a[role=button] {
-  margin: 0.5rem 0.2rem;
-  padding: 0.3rem 1.2rem;
-  background-color: orange;
-  /* background-image: linear-gradient(to right, var(--foreground3) 10%, var(--foreground2)); */
-  color: var(--foreground1);
-  border-radius: 4px;
+  margin: 0.6rem 0;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
   cursor: pointer;
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 0.7rem;
+  font-weight: bold;
 }
 
 button:hover,
-a[role=button] {
-  border: 1px solid white;
+a[role=button]:hover {
+  outline: 2px solid white;
 }
 
-header {
-  padding: 0.8rem 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: left;
+.darkButton {
+  color: white;
+  background-color: var(--bgColor1);
 }
 
-footer {
+.outlineButton {
+  background-color: transparent;
+}
+
+.lightButton {
+  color: var(--darkText);
+  background-color: var(--lightText);
+}
+
+.fancyButton {
+  color: var(--darkText);
+  background-image: linear-gradient(to right, var(--bgColor2), var(--lightText));
+  font-weight: 600;
   font-size: 0.8rem;
-  color: var(--foreground1);
-  margin-top: auto;
-  padding: 1rem 0;
-  text-align: center;
+}
+
+section {
+  /* flex-basis: 45%; */
+  padding: 1rem 1.5rem;
+  text-align: left;
+  color: inherit;
+  text-decoration: none;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  margin: 0.8rem;
+}
+
+.fitToContent {
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.darkMode {
+  background-color: var(--bgColor1);
+  color: var(--lightText);
+}
+
+.lightMode {
+  background-color: var(--bgColor3);
+  color: var(--darkText);
+}
+
+.listItem {
+  line-height: 1.5;
+  font-size: 0.9rem;
+  list-style-type: square;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+}
+
+.sideBySide {
+  display: flex;
+}
+
+.imgShadow {
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
+}
+
+label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  font-size: 0.7rem;
+  margin: 1rem 0 0.2rem 0;
+
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'] {
+  height: 1.6rem;
+  padding: 0 0.3rem;
+  background-color: var(--bgColor3);
+  color: var(--lightText);
+  width: 250px;
+}
+
+.noteText {
+  display: block;
+  font-size: 0.7rem;
+  padding: 0.2rem 0;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin-top: 3rem;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
 }

@@ -1,4 +1,4 @@
-import styles from "./navbar.module.css";
+import styles from "./layout.module.css";
 
 export default function NavBarLink({ children, Icon, href, props }) {
   return (
