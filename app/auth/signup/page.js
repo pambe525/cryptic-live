@@ -11,13 +11,13 @@ export default function SignUpPage() {
         <p>
           <label htmlFor="password">Password</label>
           <input type="password" id="password" name="password" minLength="6" required />
-          <div className="noteText">Minimum 8 characters</div>
+          <span className="noteText">Minimum 8 characters</span>
         </p>
 
         <p>
           <label htmlFor="screenName">Screen Name</label>
           <input type="text" name="screenName" pattern="^[a-zA-Z0-9_]*$" maxLength="16" required />
-          <div className="noteText">Upto 16 alphanumeric characters</div>
+          <span className="noteText">Upto 16 alphanumeric characters</span>
         </p>
          
         <p className="vCentered">
