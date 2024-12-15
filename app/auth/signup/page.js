@@ -15,7 +15,7 @@ export default function SignUpPage() {
         <div className="noteText">Upto 16 alphanumeric characters</div>
 
         <div className="vCentered">
-          <button type="submit" className="fancyButton">Register</button>
+          <button type="submit" className="fancyButton">Create Account</button>
           <a href="/auth/login" className="lightText toRight">Have an Account?</a>
         </div>
       </form>
