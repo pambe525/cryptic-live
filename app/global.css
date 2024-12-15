@@ -40,7 +40,17 @@ body {
 
 a {
   color: inherit;
-  text-decoration: none;
+  /* text-decoration: none; */
+  font-weight: 600;
+  margin: 0.6rem 0;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+a:hover {
+  color: orange;
 }
 
 p {
@@ -93,31 +103,28 @@ h3 {
 }
 
 .toRight {
-  text-align: right;
+  float: right;
 }
 
 button,
 a[role=button] {
   margin: 0.6rem 0;
   padding: 0.4rem 1rem;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
   font-size: 0.7rem;
   font-weight: bold;
+  border: 1px solid white;
 }
 
 button:hover,
 a[role=button]:hover {
-  outline: 2px solid white;
+  background-color: var(--bgColor2);
 }
 
 .darkButton {
   color: white;
   background-color: var(--bgColor1);
-}
-
-.outlineButton {
-  background-color: transparent;
 }
 
 .lightButton {
@@ -127,11 +134,13 @@ a[role=button]:hover {
 
 .fancyButton {
   color: var(--darkText);
-  background-image: linear-gradient(to right, var(--bgColor2), var(--lightText));
-  font-weight: 600;
+  background-color: orange;
   font-size: 0.8rem;
 }
 
+.vCentered {
+  vertical-align: middle;
+}
 section {
   /* flex-basis: 45%; */
   padding: 1rem 1.5rem;

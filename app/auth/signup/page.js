@@ -14,8 +14,9 @@ export default function SignUpPage() {
         <input type="text" name="screenName" pattern="^[a-zA-Z0-9_]*$" maxLength="16" required />
         <div className="noteText">Upto 16 alphanumeric characters</div>
 
-        <div>
-          <button type="submit" className="fancyButton">Create Account</button>
+        <div className="vCentered">
+          <button type="submit" className="fancyButton">Register</button>
+          <a href="/auth/login" className="lightText toRight">Have an Account?</a>
         </div>
       </form>
     </section>

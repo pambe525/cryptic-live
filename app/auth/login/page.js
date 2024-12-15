@@ -11,7 +11,7 @@ export default function LoginPage() {
 
         <div>
           <button type="submit" className="fancyButton">Login</button>
-          <a href="/auth/signup" className="lightText toRight">New User</a>
+          <a href="/auth/signup" className="lightText toRight">New User?</a>
         </div>
       </form>
     </section>
