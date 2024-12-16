@@ -42,7 +42,6 @@ a {
   color: inherit;
   /* text-decoration: none; */
   font-weight: 600;
-  margin: 0.6rem 0;
   padding: 0.4rem 1rem;
   cursor: pointer;
   font-size: 0.8rem;
@@ -99,7 +98,8 @@ h3 {
 }
 
 .dropShadow {
-  filter: drop-shadow(2px 2px black);
+  /* filter: drop-shadow(0 0 3px #ccc); */
+  box-shadow: 0 0 5px black;
 }
 
 .toRight {
@@ -108,7 +108,6 @@ h3 {
 
 button,
 a[role=button] {
-  margin: 0.6rem 0;
   padding: 0.4rem 1rem;
   border-radius: 4px;
   cursor: pointer;
@@ -141,13 +140,13 @@ a[role=button]:hover {
 .vCentered {
   vertical-align: middle;
 }
+
 section {
-  /* flex-basis: 45%; */
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   text-align: left;
   color: inherit;
   text-decoration: none;
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--lightGrad);
   border-radius: 10px;
   font-size: 0.8rem;
   margin: 0.8rem;
@@ -196,7 +195,7 @@ label {
 input[type='text'],
 input[type='email'],
 input[type='password'] {
-  height: 1.8rem;
+  height: 1.6rem;
   padding: 0 0.4rem;
   background-color: var(--bgColor3);
   color: var(--lightText);

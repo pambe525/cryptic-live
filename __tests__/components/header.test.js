@@ -7,9 +7,9 @@ import Header from "@/components/layout/header.js";
 describe("Header", () => {
   it("has logo that links to home page", () => {
     render(<Header />);
-    const link = screen.getByRole("link");
-    const logo = within(link).getByRole('img', 'logo.png');
+    const links = screen.getAllByRole("link");
+    const logo = within(links[0]).getByRole('img', 'logo.png');
     expect(logo).toBeInTheDocument();
-    expect(link).toHaveAttribute('href', '/');
+    expect(links[0]).toHaveAttribute('href', '/');
   });
 });

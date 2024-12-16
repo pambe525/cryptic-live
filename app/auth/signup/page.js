@@ -1,7 +1,7 @@
 export default function SignUpPage() {
   return (
     <section className="darkMode dropShadow fitToContent">
-      <h2 className="fancyText dropShadow">Sign Up</h2>
+      <h2 className="fancyText">Sign Up</h2>
       <form>
         <p>
           <label htmlFor="email">Email</label>
@@ -17,9 +17,9 @@ export default function SignUpPage() {
         <p>
           <label htmlFor="screenName">Screen Name</label>
           <input type="text" name="screenName" pattern="^[a-zA-Z0-9_]*$" maxLength="16" required />
-          <span className="noteText">Upto 16 alphanumeric characters</span>
+          <span className="noteText">Must be unique upto 16 alphanumeric chars</span>
         </p>
-         
+
         <p className="vCentered">
           <button type="submit" className="fancyButton">Create Account</button>
           <a href="/auth/login" className="lightText toRight">Have an Account?</a>
