@@ -99,7 +99,7 @@ h3 {
 
 .dropShadow {
   /* filter: drop-shadow(0 0 3px #ccc); */
-  box-shadow: 0 0 5px black;
+  box-shadow: 0 0 5px rgb(59, 58, 58);
 }
 
 .toRight {
@@ -150,6 +150,7 @@ section {
   border-radius: 10px;
   font-size: 0.8rem;
   margin: 0.8rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .fitToContent {
