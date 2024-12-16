@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <>
       <section className="darkMode">
-        <h2 className="fancyText dropShadow">Word Puzzles for Cruciverbalists</h2>
+        <h2 className="fancyText">Word Puzzles for Cruciverbalists</h2>
         <p>
           Unlock the world of cryptic puzzles and challenge your mind with fellow cruciverbalists.
         </p>
@@ -28,7 +28,7 @@ export default function HomePage() {
       </section>
 
       <section className="darkMode">
-        <h2 className="fancyText dropShadow">Join the Community</h2>
+        <h2 className="fancyText">Join the Community</h2>
         <p>
           One shared interest: <b>Cryptic Crosswords</b><br />
           Get your free account now!

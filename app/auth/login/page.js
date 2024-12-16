@@ -1,6 +1,6 @@
 export default function LoginPage() {
   return (
-    <section className="darkMode dropShadow fitToContent">
+    <section className="darkMode fitToContent">
       <h2 className="fancyText">Login</h2>
       <form>
         <p>

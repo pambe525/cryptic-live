@@ -1,6 +1,6 @@
 export default function SignUpPage() {
   return (
-    <section className="darkMode dropShadow fitToContent">
+    <section className="darkMode fitToContent">
       <h2 className="fancyText">Sign Up</h2>
       <form>
         <p>
