@@ -6,6 +6,6 @@ module.exports = {
   server: {
     command: 'npm start', // Command to start your local server
     port: 3000, // Port your app is running on
-    launchTimeout: 20000 // Adjust if needed
+    launchTimeout: 30000 // Adjust if needed
   }
 };
