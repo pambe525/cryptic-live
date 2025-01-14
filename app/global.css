@@ -3,7 +3,7 @@
   --lightGrad: rgb(205, 129, 222);
   --bgColor1: rgb(58, 3, 58);
   --bgColor2: rgb(217, 98, 46);
-  --bgColor3: darkslategrey;
+  --bgColor3: gray;
   --darkText: black;
   --lightText: white;
 }
@@ -132,10 +132,6 @@ a[role=button]:hover {
   font-size: 0.8rem;
 }
 
-.vCentered {
-  vertical-align: middle;
-}
-
 section {
   padding: 1rem;
   text-align: left;
@@ -180,7 +176,7 @@ section {
   box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.4);
 }
 
-label {
+label.fieldLabel {
   text-transform: uppercase;
   letter-spacing: 2px;
   display: block;
@@ -188,15 +184,13 @@ label {
   margin-bottom: 0.5rem;
 }
 
-input[type='text'],
-input[type='email'],
-input[type='password'] {
-  height: 1.6rem;
+input.inputField {
+  height: 1.5rem;
   padding: 0 0.4rem;
   background-color: var(--bgColor3);
   color: var(--lightText);
-  width: 250px;
-  border: 1px solid gray;
+  width: 100%;
+  border: 1px solid white;
   font-size: 0.8rem;
 }
 
