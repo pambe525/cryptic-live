@@ -7,7 +7,7 @@ import InputField from "@/components/forms/inputField.js";
 describe("InputField", () => {
 
   it("throws error if id is not specified", () => {
-    // this mocking is required to suppress console errors for unhandled exceptions
+    // mocking is required to suppress console errors for unhandled exceptions
     const err = console.error;
     console.error = jest.fn();
     let actualError = null;
