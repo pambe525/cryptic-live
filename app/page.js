@@ -1,4 +1,5 @@
 import Image from "next/image";
+import crossword from "@/public/crossword.png"
 
 export const metadata = {
   title: "CrypticLive Home",
@@ -23,7 +24,7 @@ export default function HomePage() {
             <li><b>Create and share</b> your own cryptic clues </li>
             <li><b>Connect</b> with other passionate crosword puzzlers</li>
           </ul>
-          <Image className="imgShadow" src="/crossword.png" alt="Crossword" width={140} height={140} priority />
+          <Image className="imgShadow" src={crossword} alt="Crossword" width={140} height={140} priority />
         </div>
       </section>
 
