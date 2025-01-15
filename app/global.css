@@ -179,7 +179,7 @@ section {
 label.fieldLabel {
   text-transform: uppercase;
   letter-spacing: 2px;
-  display: block;
+  display: inline-block;
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
 }
