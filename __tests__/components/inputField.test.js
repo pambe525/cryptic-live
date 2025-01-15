@@ -6,8 +6,19 @@ import InputField from "@/components/forms/inputField.js";
 
 describe("InputField", () => {
 
+  const renderInputField = ({ id = "myInput", labelText = "some label", hint, type, required } = {}) => {
+    render(<InputField id={id} labelText={labelText} hint={hint} type={type} required={required} />);
+    const re = new RegExp(labelText, "i");  // required to match when labelText has * added to it
+    return {
+      inputField: screen.getByLabelText(re),
+      labelElement: document.querySelector(`label[for="${id}"]`),
+      hintElement: hint ? screen.getByText(hint) : null,
+      eyeIconLink: document.querySelector('a[role="link"]'),
+      eyeIcon: document.querySelector('svg'),
+    };
+  };
+
   it("throws error if id is not specified", () => {
-    // mocking is required to suppress console errors for unhandled exceptions
     const err = console.error;
     console.error = jest.fn();
     let actualError = null;
@@ -18,41 +29,51 @@ describe("InputField", () => {
     }
     expect(actualError).toEqual("InputField: id parameter is required.");
     console.error = err;
-  })
+  });
 
   it("has input field and specified label", () => {
-    const labelText = "some label";
-    const id = "myInput";
-    render(<InputField id={id} labelText={labelText} />);
-    const inputField = screen.getByLabelText(labelText);
-    const labelElement = document.querySelector(`label[for="${id}"]`);
+    const { labelElement } = renderInputField();
     expect(labelElement).toBeInTheDocument();
-    expect(labelElement.textContent).toEqual(labelText);
+    expect(labelElement.textContent).toEqual("some label");
+  });
+
+  it("renders input with correct type", () => {
+    const { inputField } = renderInputField({ type: "email" });
+    expect(inputField.type).toEqual("email");
   });
 
   it("name attribute defaults to id", () => {
-    const labelText = "some label";
-    const id = "myInput";
-    render(<InputField id={id} labelText={labelText} />);
-    const inputField = screen.getByLabelText(labelText);
-    expect(inputField.name).toEqual(id);
-  })
+    const { inputField } = renderInputField();
+    expect(inputField.name).toEqual("myInput");
+  });
 
   it("hint is used to display note", () => {
-    const labelText = "some label";
-    const id = "myInput";
-    const hint = "this is a note";
-    render(<InputField id={id} labelText={labelText} hint={hint} />);
-    const spanFieldField = screen.getByText(hint);
-    expect(spanFieldField).toBeInTheDocument();
-  })
+    const { hintElement } = renderInputField({ hint: "this is a note" });
+    expect(hintElement).toBeInTheDocument();
+  });
 
-  it('required field adds * to end of label', () => {
-    const labelText = "some label";
-    const id = "myInput";
-    render(<InputField id={id} labelText={labelText} required />);
-    const labelElement = document.querySelector(`label[for="${id}"]`);
+  it("required field adds * to end of label", () => {
+    const { labelElement } = renderInputField({ required: true });
     expect(labelElement.textContent).toContain("*");
   });
 
-})
+  it("text field type does not have an eye icon", () => {
+    const { eyeIconLink } = renderInputField({ type: "text" });
+    expect(eyeIconLink).not.toBeInTheDocument();
+  });
+
+  it("password field type has an eye icon", () => {
+    const { eyeIconLink } = renderInputField({ type: "password" });
+    expect(eyeIconLink).toBeInTheDocument();
+    expect(eyeIconLink.title).toEqual("Show");
+    const eyeIcon = screen.getByTestId("fa-eye");
+    expect(eyeIcon).toBeInTheDocument();
+  });
+
+  // it("eye icon link has FaEye icon", () => {
+  //   const { eyeIconLink } = renderInputField({ type: "password" });
+  //   const eyeIcon = eyeIconLink.querySelector("svg");
+  //   expect(eyeIcon).toBeInTheDocument();
+  // });
+
+});
