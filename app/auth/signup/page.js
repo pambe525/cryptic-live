@@ -7,8 +7,8 @@ export default function SignUpPage() {
       <form>
         <InputField labelText="Email" hint="Enter your active email for important updates!" type="email" id="email1" required />
         <InputField labelText="Confirm Email" type="email" id="email2" required />
-        <InputField labelText="Password" hint="Minimum 8 characters" id="password1" minLength="8" required />
-        <InputField labelText="Confirm Password" id="password2" minLength="8" required />
+        <InputField labelText="Password" type="password" hint="Minimum 8 characters" id="password1" minLength="8" required />
+        <InputField labelText="Confirm Password" type="password" id="password2" minLength="8" required />
         <InputField labelText="Screen Name" hint="Unique name upto 16 alphanumeric chars" pattern="^[a-zA-Z0-9_]*$" id="screenName" maxLength="16" required />
         <p>
           <button type="submit" className="fancyButton">Create Account</button>
