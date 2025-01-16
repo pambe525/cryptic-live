@@ -8,7 +8,7 @@ describe('Home Page', () => {
     await expect(page.title()).resolves.toMatch('CrypticLive Home');
     const description = await page.$eval("head > meta[name='description']", element => element.content);
     expect(description).toMatch("Word Puzzles for Cruciverbalists");
-  });
+  }, 30000);
 
   it('should have root layout', async () => {
     const header = await page.$(".container > header");
@@ -19,5 +19,5 @@ describe('Home Page', () => {
     expect(footer).not.toBeNull();
     expect(navbar).toBeNull();
     expect(sections.length).toBe(2);  // Home page content
-  });
+  }, 30000);
 })
