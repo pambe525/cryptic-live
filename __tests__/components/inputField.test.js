@@ -76,7 +76,7 @@ describe("InputField", () => {
     let { eyeIconLink } = renderInputField({ type: "password" });
     let eyeSlashIcon = screen.queryByTestId("fa-eye-slash");
     expect(eyeSlashIcon).not.toBeInTheDocument();
-    await act(async () => await eyeIconLink.click());
+    await act(() => eyeIconLink.click());
     const eyeIcon = screen.queryByTestId("fa-eye");
     expect(eyeIcon).not.toBeInTheDocument();
     eyeSlashIcon = screen.getByTestId("fa-eye-slash");
