@@ -3,6 +3,7 @@
  */
 import { render, screen } from "@testing-library/react";
 import InputField from "@/components/forms/inputField.js";
+import { act } from "react";
 
 describe("InputField", () => {
 
@@ -63,17 +64,27 @@ describe("InputField", () => {
   });
 
   it("password field type has an eye icon", () => {
-    const { eyeIconLink } = renderInputField({ type: "password" });
+    const { eyeIconLink, inputField } = renderInputField({ type: "password" });
     expect(eyeIconLink).toBeInTheDocument();
     expect(eyeIconLink.title).toEqual("Show");
+    expect(inputField.type).toEqual("password");
     const eyeIcon = screen.getByTestId("fa-eye");
     expect(eyeIcon).toBeInTheDocument();
   });
 
-  // it("eye icon link has FaEye icon", () => {
-  //   const { eyeIconLink } = renderInputField({ type: "password" });
-  //   const eyeIcon = eyeIconLink.querySelector("svg");
-  //   expect(eyeIcon).toBeInTheDocument();
-  // });
+  it("clicking on eye icon changes icon, title and input type", async () => {
+    let { eyeIconLink } = renderInputField({ type: "password" });
+    let eyeSlashIcon = screen.queryByTestId("fa-eye-slash");
+    expect(eyeSlashIcon).not.toBeInTheDocument();
+    await act(async () => await eyeIconLink.click());
+    const eyeIcon = screen.queryByTestId("fa-eye");
+    expect(eyeIcon).not.toBeInTheDocument();
+    eyeSlashIcon = screen.getByTestId("fa-eye-slash");
+    expect(eyeSlashIcon).toBeInTheDocument();
+    eyeIconLink = document.querySelector('a[role="link"]');
+    expect(eyeIconLink.title).toEqual("Hide");
+    const inputField = screen.getByLabelText("some label");
+    expect(inputField.type).toEqual("text");
+  });
 
 });
