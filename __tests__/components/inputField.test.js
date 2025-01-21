@@ -72,7 +72,7 @@ describe("InputField", () => {
     expect(eyeIcon).toBeInTheDocument();
   });
 
-  it("clicking on eye icon changes icon, title and input type", async () => {
+  it("clicking on eye icon changes the icon, title and input type", async () => {
     let { eyeIconLink } = renderInputField({ type: "password" });
     let eyeSlashIcon = screen.queryByTestId("fa-eye-slash");
     expect(eyeSlashIcon).not.toBeInTheDocument();
