@@ -12,6 +12,7 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
+    "@auth/prisma-adapter": "^2.7.4",
     "@prisma/client": "^6.0.1",
     "next": "^15.0.3",
     "next-auth": "^5.0.0-beta.25",
