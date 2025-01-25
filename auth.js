@@ -1,5 +1,10 @@
-import NextAuth from "next-auth"
+import NextAuth from "next-auth";
+import Resend from "next-auth/providers/resend";
+import { PrismaAdapter } from "@auth/prisma-adapter";
+import { prisma } from "@/prisma/prisma.js";
+
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
-  providers: [],
+  adapter: PrismaAdapter(prisma),
+  providers: [Resend],
 })
