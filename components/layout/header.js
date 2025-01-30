@@ -8,7 +8,7 @@ export default function Header() {
     <>
       <header className={styles.header}>
         <a href="/">
-          <Image src={logo} alt="Logo" width={180} height={40} priority as="image" />
+          <Image src={logo} alt="Logo" width={180} height={40} />
         </a>
         <hr />
         <Navbar />

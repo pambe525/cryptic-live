@@ -24,7 +24,7 @@ export default function HomePage() {
             <li><b>Create and share</b> your own cryptic clues </li>
             <li><b>Connect</b> with other passionate crosword puzzlers</li>
           </ul>
-          <Image className="imgShadow" as="image" src={crossword} alt="Crossword" width={140} height={140} priority />
+          <Image className="imgShadow" src={crossword} alt="Crossword" width={140} height={140} />
         </div>
       </section>
 
