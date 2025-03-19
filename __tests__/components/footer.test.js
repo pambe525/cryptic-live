@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import { render, screen } from "@testing-library/react";
-import Footer from "@/components/layout/footer.js";
+import Footer from "@/components/layout/Footer.js";
 
 describe(Footer, () => {
   test('has copyright', () => {

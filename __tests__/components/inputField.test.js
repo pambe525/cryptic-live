@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import { render, screen } from "@testing-library/react";
-import InputField from "@/components/forms/inputField.js";
+import InputField from "@/components/forms/InputField.js";
 import { act } from "react";
 
 describe("InputField", () => {

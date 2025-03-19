@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import { render, screen, within } from "@testing-library/react";
-import Header from "@/components/layout/header.js";
+import Header from "@/components/layout/Header.js";
 
 describe("Header", () => {
   it("has logo that links to home page", () => {

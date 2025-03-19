@@ -1,13 +1,13 @@
 import { IoHomeSharp } from "react-icons/io5";
 import { FaGraduationCap } from "react-icons/fa6";
-import NavBarLink from "./navbarlink.js";
+import NavbarLink from "./navbarlink.js";
 import styles from "./layout.module.css";
 
 export default function NavBar() {
   return (
     <nav className={styles.navbar}>
-      <NavBarLink active Icon={IoHomeSharp} href="/">Home</NavBarLink>
-      <NavBarLink Icon={FaGraduationCap} href="/course">Course</NavBarLink>
+      <NavbarLink active Icon={IoHomeSharp} href="/">Home</NavbarLink>
+      <NavbarLink Icon={FaGraduationCap} href="/course">Course</NavbarLink>
     </nav>
   );
 }

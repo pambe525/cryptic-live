@@ -2,7 +2,7 @@
  * @jest-environment jsdom
  */
 import { render, screen } from "@testing-library/react";
-import NavBar from "@/components/layout/navbar.js";
+import NavBar from "@/components/layout/Navbar.js";
 
 describe("NavBar", () => {
   it('is rendered', () => {
