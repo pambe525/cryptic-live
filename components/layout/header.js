@@ -1,6 +1,6 @@
 import Image from "next/image";
 import styles from "./layout.module.css";
-import Navbar from "./navbar.js";
+import Navbar from "./Navbar.js";
 import logo from "/public/logo.png";
 
 export default function Header() {

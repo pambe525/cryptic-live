@@ -1,6 +1,6 @@
 import { IoHomeSharp } from "react-icons/io5";
 import { FaGraduationCap } from "react-icons/fa6";
-import NavbarLink from "./navbarlink.js";
+import NavbarLink from "./NavbarLink.js";
 import styles from "./layout.module.css";
 
 export default function NavBar() {
