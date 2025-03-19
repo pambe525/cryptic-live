@@ -11,7 +11,7 @@ export default function SignUpPage() {
       <form
         action={async (formData) => {
           "use server"
-          await signIn("resend", formData)
+          // await signIn("resend", formData)
         }}
       >
         <InputField labelText="Email" hint={emailNote} type="email" id="email" required />
@@ -20,7 +20,7 @@ export default function SignUpPage() {
         <InputField labelText="Screen Name" hint="Unique name upto 16 alphanumeric chars" pattern="^[a-zA-Z0-9_]*$" id="screenName" maxLength="16" required />
         {error && <div class="red-alert-box">This is a test message</div>}
         <p>
-          <SubmitButton labelText="Sign Up" />
+          <SubmitButton text="Sign Up" />
           <a href="/auth/login" className="lightText toRight">Have an Account?</a>
         </p>
         <p>* required field</p>
