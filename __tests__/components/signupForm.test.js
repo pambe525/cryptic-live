@@ -13,4 +13,11 @@ describe("SignUpForm", () => {
     expect(screen.getByLabelText("Screen Name*")).toBeInTheDocument();
     expect(screen.getByText("Sign Up")).toBeInTheDocument();
   });
+
+  it("renders email note, password hint, and screen name hint", () => {
+    render(<SignUpForm />);
+    expect(screen.getByText("An email will be sent for verification to this address.")).toBeInTheDocument();
+    expect(screen.getByText("Minimum 8 characters")).toBeInTheDocument();
+    expect(screen.getByText("Name upto 16 alphanumeric chars")).toBeInTheDocument();
+  });
 });
